@@ -19,6 +19,11 @@ public class SpringBootKubernatesDemoApplication {
 	public String welcome(@PathVariable String name) {
 		return "Hi  "+name +" Welcome to the AWS kubernates project ";
 	}
+	
+	@GetMapping("/status")
+	public String health() {
+		return "Spring boot is UP and Running .....!";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootKubernatesDemoApplication.class, args);
